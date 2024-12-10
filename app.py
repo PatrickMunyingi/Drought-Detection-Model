@@ -7,11 +7,10 @@ st.title("Drought Detection in Kenya Based on the different Return Periods")
 # NDMA Drought Table
 ndma_data = {
     "Period": ["2005-2006", "2008-2011", "2016-2017", "2017-2018", "2020-2022"],
-    "National": ["Yes", "Yes", "Yes", "", "Yes"],
     "Disaster Declarations": ["", "Yes", "Yes", "", "Yes"],
     "ReliefWeb": ["", "Yes", "Yes", "", "Yes"]
 }
-ndma_table = pd.DataFrame(ndma_data)
+ndma_table = pd.DataFrame(ndma_data,index_col='Period')
 # Display NDMA Table
 st.subheader("Drought Table")
 st.write(ndma_table)
