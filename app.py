@@ -10,7 +10,8 @@ ndma_data = {
     "Disaster Declarations": ["", "Yes", "Yes", "", "Yes"],
     "ReliefWeb": ["", "Yes", "Yes", "", "Yes"]
 }
-ndma_table = pd.DataFrame(ndma_data,index_col='Period')
+ndma_table = pd.DataFrame(ndma_data)
+ndma_table.set_index("Period", inplace=True)
 # Display NDMA Table
 st.subheader("Drought Table")
 st.write(ndma_table)
