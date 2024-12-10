@@ -2,8 +2,8 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
-st.title("Drought Detection Visualization in Kenya Based on the different Return Periods")
-st.write("Visualize Drought detection capabilities of the model based on return periods and rainfall types.")
+st.title("Drought Detection in Kenya Based on the different Return Periods")
+st.write("Visualize Drought detection capabilities of the model based on return periods and rainfall types")
 
 # User Input
 return_period = st.selectbox("Select Return Period", options=["1 in 4", "1 in 8", "1 in 10"])
