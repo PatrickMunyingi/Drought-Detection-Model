@@ -12,6 +12,7 @@ ndma_data = {
     "ReliefWeb": ["", "Yes", "Yes", "", "Yes"]
 }
 ndma_table = pd.DataFrame(ndma_data)
+print(ndma_table)
 
 
 
