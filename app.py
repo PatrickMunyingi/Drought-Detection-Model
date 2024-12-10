@@ -10,7 +10,7 @@ return_period = st.selectbox("Select Return Period", options=["1 in 4", "1 in 8"
 rainfall_type = st.selectbox("Select Rainfall Type", options=["Both", "Long", "Short"])
 
 if return_period == "1 in 4" and rainfall_type == "Both":
-    data = pd.read_excel("C:/Users/PatrickMunyingi/Downloads/CREST Pricing Simulations/1-in-4.xlsx", sheet_name="AnnualPayouts(all sites)", index_col=0)
+    data = pd.read_excel("1-in-4.xlsx", sheet_name="AnnualPayouts(all sites)", index_col=0)
     data['Average'] = data.mean(axis=1)
     data = data * 100
     fig = px.bar(data['Average'], x=data.index, y=data['Average'], title='Average Payout for Both Rains (1 in 4)')
@@ -27,7 +27,7 @@ if return_period == "1 in 4" and rainfall_type == "Both":
     st.plotly_chart(fig)
 
 elif return_period == "1 in 4" and rainfall_type == "Long":
-    data = pd.read_excel("C:/Users/PatrickMunyingi/Downloads/CREST Pricing Simulations/1-in-4.xlsx", sheet_name="LRPayouts(all sites)", index_col=0)
+    data = pd.read_excel("1-in-4.xlsx", sheet_name="LRPayouts(all sites)", index_col=0)
     data['Average'] = data.mean(axis=1)
     data = data * 100
     fig = px.bar(data['Average'], x=data.index, y=data['Average'], title='Average Payout for Long Rains (1 in 4)')
@@ -44,7 +44,7 @@ elif return_period == "1 in 4" and rainfall_type == "Long":
     st.plotly_chart(fig)
 
 elif return_period == "1 in 4" and rainfall_type == "Short":
-    data = pd.read_excel("C:/Users/PatrickMunyingi/Downloads/CREST Pricing Simulations/1-in-4.xlsx", sheet_name="SRPayouts(all sites)", index_col=0)
+    data = pd.read_excel("1-in-4.xlsx", sheet_name="SRPayouts(all sites)", index_col=0)
     data['Average'] = data.mean(axis=1)
     data = data * 100
     fig = px.bar(data['Average'], x=data.index, y=data['Average'], title='Average Payout for Short Rains (1 in 4)')
@@ -61,7 +61,7 @@ elif return_period == "1 in 4" and rainfall_type == "Short":
     st.plotly_chart(fig)
 
 elif return_period == "1 in 8" and rainfall_type == "Both":
-    data = pd.read_excel("C:/Users/PatrickMunyingi/Downloads/CREST Pricing Simulations/1-in-8.xlsx", sheet_name="AnnualPayouts(all sites)", index_col=0)
+    data = pd.read_excel("1-in-8.xlsx", sheet_name="AnnualPayouts(all sites)", index_col=0)
     data['Average'] = data.mean(axis=1)
     data = data * 100
     fig = px.bar(data['Average'], x=data.index, y=data['Average'], title='Average Payout for Both Rains (1 in 8)')
@@ -78,7 +78,7 @@ elif return_period == "1 in 8" and rainfall_type == "Both":
     st.plotly_chart(fig)
 
 elif return_period == "1 in 8" and rainfall_type == "Long":
-    data = pd.read_excel("C:/Users/PatrickMunyingi/Downloads/CREST Pricing Simulations/1-in-8.xlsx", sheet_name="LRPayouts(all sites)", index_col=0)
+    data = pd.read_excel("1-in-8.xlsx", sheet_name="LRPayouts(all sites)", index_col=0)
     data['Average'] = data.mean(axis=1)
     data = data * 100
     fig = px.bar(data['Average'], x=data.index, y=data['Average'], title='Average Payout for Long Rains (1 in 8)')
@@ -95,7 +95,7 @@ elif return_period == "1 in 8" and rainfall_type == "Long":
     st.plotly_chart(fig)
 
 elif return_period == "1 in 8" and rainfall_type == "Short":
-    data = pd.read_excel("C:/Users/PatrickMunyingi/Downloads/CREST Pricing Simulations/1-in-8.xlsx", sheet_name="SRPayouts(all sites)", index_col=0)
+    data = pd.read_excel("1-in-8.xlsx", sheet_name="SRPayouts(all sites)", index_col=0)
     data['Average'] = data.mean(axis=1)
     data = data * 100
     fig = px.bar(data['Average'], x=data.index, y=data['Average'], title='Average Payout for Short Rains (1 in 8)')
@@ -112,7 +112,7 @@ elif return_period == "1 in 8" and rainfall_type == "Short":
     st.plotly_chart(fig)
 
 elif return_period == "1 in 10" and rainfall_type == "Both":
-    data = pd.read_excel("C:/Users/PatrickMunyingi/Downloads/CREST Pricing Simulations/1-in-10.xlsx", sheet_name="AnnualPayouts(all sites)", index_col=0)
+    data = pd.read_excel("1-in-10.xlsx", sheet_name="AnnualPayouts(all sites)", index_col=0)
     data['Average'] = data.mean(axis=1)
     data = data * 100
     fig = px.bar(data['Average'], x=data.index, y=data['Average'], title='Average Payout for Both Rains (1 in 10)')
@@ -129,7 +129,7 @@ elif return_period == "1 in 10" and rainfall_type == "Both":
     st.plotly_chart(fig)
 
 elif return_period == "1 in 10" and rainfall_type == "Long":
-    data = pd.read_excel("C:/Users/PatrickMunyingi/Downloads/CREST Pricing Simulations/1-in-10.xlsx", sheet_name="LRPayouts(all sites)", index_col=0)
+    data = pd.read_excel("1-in-10.xlsx", sheet_name="LRPayouts(all sites)", index_col=0)
     data['Average'] = data.mean(axis=1)
     data = data * 100
     fig = px.bar(data['Average'], x=data.index, y=data['Average'], title='Average Payout for Long Rains (1 in 10)')
@@ -146,7 +146,7 @@ elif return_period == "1 in 10" and rainfall_type == "Long":
     st.plotly_chart(fig)
 
 elif return_period == "1 in 10" and rainfall_type == "Short":
-    data = pd.read_excel("C:/Users/PatrickMunyingi/Downloads/CREST Pricing Simulations/1-in-10.xlsx", sheet_name="SRPayouts(all sites)", index_col=0)
+    data = pd.read_excel("1-in-10.xlsx", sheet_name="SRPayouts(all sites)", index_col=0)
     data['Average'] = data.mean(axis=1)
     data = data * 100
     fig = px.bar(data['Average'], x=data.index, y=data['Average'], title='Average Payout for Short Rains (1 in 10)')
