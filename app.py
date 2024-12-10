@@ -4,6 +4,16 @@ import plotly.express as px
 
 st.title("Drought Detection in Kenya Based on the different Return Periods")
 #st.write("Visualize Drought detection capabilities of the model based on return periods and rainfall types")
+# NDMA Drought Table
+ndma_data = {
+    "Period": ["2005-2006", "2008-2011", "2016-2017", "2017-2018", "2020-2022"],
+    "National": ["Yes", "Yes", "Yes", "", "Yes"],
+    "Disaster Declarations": ["", "Yes", "Yes", "", "Yes"],
+    "ReliefWeb": ["", "Yes", "Yes", "", "Yes"]
+}
+ndma_table = pd.DataFrame(ndma_data)
+
+
 
 # User Input
 return_period = st.selectbox("Select Return Period", options=["1 in 4", "1 in 8", "1 in 10"])
